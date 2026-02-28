@@ -448,30 +448,53 @@ if (contactForm && submitBtn) {
     e.preventDefault();
     var label = submitBtn.querySelector('.btn-label');
     var dots  = submitBtn.querySelector('.btn-dots');
+
+    // Show loading dots
     if (label) label.style.display = 'none';
     if (dots)  dots.style.display  = 'flex';
     submitBtn.disabled = true;
 
-    setTimeout(function() {
+    // Submit to Formspree
+    var data = new FormData(contactForm);
+    fetch('https://formspree.io/f/xjgeznpg', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(response) {
       if (label) label.style.display = '';
       if (dots)  dots.style.display  = 'none';
       submitBtn.disabled = false;
-      contactForm.reset();
-      if (formSuccess) {
-        formSuccess.style.display   = 'flex';
-        formSuccess.style.opacity   = '0';
-        formSuccess.style.transform = 'translateY(6px)';
-        formSuccess.style.transition = 'opacity .45s, transform .45s';
-        requestAnimationFrame(function() {
-          formSuccess.style.opacity   = '1';
-          formSuccess.style.transform = 'none';
-        });
-        setTimeout(function() {
-          formSuccess.style.opacity = '0';
-          setTimeout(function() { formSuccess.style.display = 'none'; }, 400);
-        }, 5000);
+
+      if (response.ok) {
+        // Success
+        contactForm.reset();
+        if (formSuccess) {
+          formSuccess.style.display    = 'flex';
+          formSuccess.style.opacity    = '0';
+          formSuccess.style.transform  = 'translateY(6px)';
+          formSuccess.style.transition = 'opacity .45s, transform .45s';
+          requestAnimationFrame(function() {
+            formSuccess.style.opacity  = '1';
+            formSuccess.style.transform = 'none';
+          });
+          setTimeout(function() {
+            formSuccess.style.opacity = '0';
+            setTimeout(function() { formSuccess.style.display = 'none'; }, 400);
+          }, 5000);
+        }
+      } else {
+        // Server error
+        alert('Oops! Something went wrong. Please email me directly at 1wesleydm@gmail.com');
       }
-    }, 1800);
+    })
+    .catch(function() {
+      // Network error
+      if (label) label.style.display = '';
+      if (dots)  dots.style.display  = 'none';
+      submitBtn.disabled = false;
+      alert('No internet connection. Please email me directly at 1wesleydm@gmail.com');
+    });
   });
 }
 
@@ -480,3 +503,17 @@ if (contactForm && submitBtn) {
 ───────────────────────────────────────── */
 var yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ─────────────────────────────────────────
+   EMAIL LINK — built at runtime so Cloudflare
+   email obfuscation cannot touch it
+───────────────────────────────────────── */
+(function() {
+  var u = '1wesleydm';
+  var d = 'gmail.com';
+  var email = u + '@' + d;
+  var link  = document.getElementById('emailLink');
+  var disp  = document.getElementById('emailDisplay');
+  if (link) link.href = 'mailto:' + email;
+  if (disp) disp.textContent = email;
+})();

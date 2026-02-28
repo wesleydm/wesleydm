@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wesley D.M. builds clean, modern, high-converting websites for businesses in Lagos, Nigeria and worldwide. Web Designer, Frontend Developer & Backend Developer." />
+  <title>Wesley D.M. — Web Designer & Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">W<span>D</span></div>
+      <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+      <div class="loader-percent" id="loaderPercent">0%</div>
+    </div>
+    <div class="loader-bg-text" aria-hidden="true">LOADING</div>
+  </div>
+
+  <!-- CONTEXT-AWARE RING CURSOR (desktop only, hidden via CSS on touch) -->
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══════════════════════
+       NAVBAR
+  ═══════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Wesley <span>D.M.</span></a>
+
+      <!-- Desktop nav (hidden on mobile via CSS) -->
+      <nav class="nav-links" aria-label="Desktop navigation">
+        <a href="#home"      class="nav-link">Home</a>
+        <a href="#about"     class="nav-link">About</a>
+        <a href="#services"  class="nav-link">Services</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#contact"   class="nav-link nav-cta">Hire Me</a>
+      </nav>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <nav class="nav-overlay" id="navOverlay" aria-label="Mobile navigation">
+    <a href="#home"      class="nav-link">Home</a>
+    <a href="#about"     class="nav-link">About</a>
+    <a href="#services"  class="nav-link">Services</a>
+    <a href="#portfolio" class="nav-link">Portfolio</a>
+    <a href="#contact"   class="nav-link nav-cta">Hire Me</a>
+  </nav>
+
+  <!-- ═══════════════════════
+       HERO
+  ═══════════════════════ -->
+  <section class="hero" id="home">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="hero-bg-text" aria-hidden="true">DESIGN</div>
+
+    <div class="hero-container">
+
+      <div class="hero-badge hero-anim" style="--i:0">
+        <span class="badge-dot"></span>
+        Open to Worldwide Clients
+      </div>
+
+      <h1 class="hero-headline hero-anim" style="--i:1">
+        Web Designer &amp;<br />
+        <em>Frontend Developer</em><br />
+        <span class="hl-line">Based in Lagos.</span>
+      </h1>
+
+      <p class="hero-sub hero-anim" style="--i:2">
+        I'm Wesley D.M. — I build clean, modern, high-converting websites
+        for businesses in Nigeria and across the globe.
+      </p>
+
+      <div class="hero-ctas hero-anim" style="--i:3">
+        <a href="#portfolio" class="btn btn-primary">
+          <span>View My Work</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-glass">Hire Me</a>
+      </div>
+
+      <div class="hero-stats hero-anim" style="--i:4">
+        <div class="stat">
+          <div class="stat-top"><span class="stat-num" data-count="20">0</span><span class="stat-plus">+</span></div>
+          <span class="stat-label">Projects<br/>Delivered</span>
+        </div>
+        <div class="stat">
+          <div class="stat-top"><span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span></div>
+          <span class="stat-label">Countries<br/>Served</span>
+        </div>
+        <div class="stat">
+          <div class="stat-top"><span class="stat-num" data-count="100">0</span><span class="stat-plus">%</span></div>
+          <span class="stat-label">Client<br/>Satisfaction</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-corner-tag">Lagos, Nigeria × Worldwide</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Web Design</span><span class="msep">✦</span>
+      <span>E-commerce Development</span><span class="msep">✦</span>
+      <span>Landing Pages</span><span class="msep">✦</span>
+      <span>Responsive Design</span><span class="msep">✦</span>
+      <span>Frontend Development</span><span class="msep">✦</span>
+      <span>Nigeria &amp; Worldwide</span><span class="msep">✦</span>
+      <span>Website Redesign</span><span class="msep">✦</span>
+      <span>Web Design</span><span class="msep">✦</span>
+      <span>E-commerce Development</span><span class="msep">✦</span>
+      <span>Landing Pages</span><span class="msep">✦</span>
+      <span>Responsive Design</span><span class="msep">✦</span>
+      <span>Frontend Development</span><span class="msep">✦</span>
+      <span>Nigeria &amp; Worldwide</span><span class="msep">✦</span>
+      <span>Website Redesign</span><span class="msep">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════
+       ABOUT
+  ═══════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual reveal">
+          <div class="about-img-wrap">
+            <div class="about-img-placeholder">
+              <div class="abt-orb abt-orb-1"></div>
+              <div class="abt-orb abt-orb-2"></div>
+              <div class="initials">WD</div>
+            </div>
+            <div class="about-accent-box"></div>
+            <div class="about-float-tag">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Lagos, Nigeria
+            </div>
+          </div>
+          <div class="about-mini-stats">
+            <div class="mini-stat"><span class="ms-val">5.0</span><span class="ms-label">★ Rating</span></div>
+            <div class="mini-stat-sep"></div>
+            <div class="mini-stat"><span class="ms-val">2+</span><span class="ms-label">Years Exp.</span></div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-label reveal">About Me</div>
+          <h2 class="section-title reveal delay-1">
+            I Build Websites That<br /><em>Look Good &amp; Convert</em>
+          </h2>
+          <p class="about-bio reveal delay-2">
+            I'm Wesley D.M., a Web Designer and Frontend Developer based in Lagos, Nigeria. I specialise in building clean, fast, and modern websites that help businesses make a powerful first impression — locally and internationally.
+          </p>
+          <p class="about-bio reveal delay-2">
+            Whether you're a startup in Lagos, a growing brand in the UK, or an entrepreneur anywhere in the world, I bring global design standards and sharp attention to detail to every single project.
+          </p>
+          <div class="skills-grid reveal delay-3">
+            <div class="skill-pill">HTML</div>
+            <div class="skill-pill">CSS</div>
+            <div class="skill-pill">JavaScript</div>
+            <div class="skill-pill">Responsive Design</div>
+          </div>
+          <a href="#contact" class="about-cta reveal delay-4">
+            Let's work together
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       SERVICES
+  ═══════════════════════ -->
+  <section class="services section section-dark" id="services">
+    <div class="svc-bg-dots" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label reveal">What I Do</div>
+        <h2 class="section-title reveal delay-1">Services Built to<br /><em>Grow Your Business</em></h2>
+        <p class="section-sub reveal delay-2">Every service is focused on one thing — giving your business a competitive edge online.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="svc-num">01</div>
+          <div class="svc-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="svc-title">Business Websites</h3>
+          <p class="svc-desc">Professional, credibility-building sites that make your business look world-class and win customer trust from the very first click.</p>
+          <div class="svc-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-1">
+          <div class="svc-num">02</div>
+          <div class="svc-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          </div>
+          <h3 class="svc-title">E-commerce Development</h3>
+          <p class="svc-desc">Fully functional online stores built to sell — fast, mobile-first, and engineered to convert visitors into paying customers.</p>
+          <div class="svc-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-2">
+          <div class="svc-num">03</div>
+          <div class="svc-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="svc-title">Landing Pages</h3>
+          <p class="svc-desc">Laser-focused, high-converting pages with one goal — turning visitors into leads, subscribers, or paying customers.</p>
+          <div class="svc-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-3">
+          <div class="svc-num">04</div>
+          <div class="svc-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+          </div>
+          <h3 class="svc-title">Website Redesign</h3>
+          <p class="svc-desc">Transform your outdated site into a modern, high-performance digital asset that properly reflects your brand today.</p>
+          <div class="svc-arrow">→</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       PORTFOLIO
+  ═══════════════════════ -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="portfolio-header">
+        <div>
+          <div class="section-label reveal">Selected Work</div>
+          <h2 class="section-title reveal delay-1">Projects Built to<br /><em>Perform &amp; Impress</em></h2>
+        </div>
+        <p class="portfolio-sub reveal delay-2">Every project is built with intention, precision, and a relentless focus on results.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- LuxeWear NG -->
+        <article class="project-card reveal"
+          data-project="luxewear"
+          data-title="LuxeWear NG"
+          data-tag="E-commerce Development"
+          data-desc="A premium fashion e-commerce platform for a Nigerian luxury clothing brand. Built to feel international, load fast, and convert browsers into buyers — with smooth product filtering, a mobile-first layout, and a seamless checkout flow."
+          data-tech="HTML · CSS · JavaScript · Responsive Design · Payment Integration"
+          data-result="Significant increase in online orders within the first two months of launch."
+          data-year="2024">
+          <div class="proj-img proj-img-1">
+            <div class="proj-mockup">
+              <div class="pmock-bar"><i></i><i></i><i></i></div>
+              <div class="pmock-body">
+                <div class="pmock-hero"></div>
+                <div class="pmock-grid"><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="proj-overlay">
+              <div class="proj-overlay-btns">
+                <button class="proj-view-btn open-modal" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Case Study
+                </button>
+                <a class="proj-view-btn proj-live-btn"
+                   href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20saw%20LuxeWear%20NG%20and%20want%20something%20similar!"
+                   target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Get Similar
+                </a>
+              </div>
+            </div>
+            <div class="proj-tag">E-commerce</div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-info-row">
+              <h3 class="proj-title">LuxeWear NG</h3>
+              <span class="proj-year">2024</span>
+            </div>
+            <p class="proj-desc">Premium fashion e-commerce store — beautiful, fast, and built for conversions.</p>
+            <div class="proj-actions">
+              <button class="proj-link open-modal" type="button">View Case Study →</button>
+              <a class="proj-live-link"
+                 href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20want%20a%20similar%20project%20to%20LuxeWear%20NG"
+                 target="_blank" rel="noopener noreferrer">Get Similar ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SparkleClean Lagos -->
+        <article class="project-card reveal delay-1"
+          data-project="sparkleclean"
+          data-title="SparkleClean Lagos"
+          data-tag="Business Website"
+          data-desc="A professional service website for a fast-growing cleaning company in Lagos. Built with an online booking flow, clear service listings, customer testimonials, and a strong local SEO foundation to drive Google visibility and organic bookings."
+          data-tech="HTML · CSS · JavaScript · Responsive Design · Local SEO"
+          data-result="3× increase in booking inquiries within the first month of launch."
+          data-year="2024">
+          <div class="proj-img proj-img-2">
+            <div class="proj-mockup">
+              <div class="pmock-bar"><i></i><i></i><i></i></div>
+              <div class="pmock-body">
+                <div class="pmock-hero"></div>
+                <div class="pmock-rows"><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="proj-overlay">
+              <div class="proj-overlay-btns">
+                <button class="proj-view-btn open-modal" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Case Study
+                </button>
+                <a class="proj-view-btn proj-live-btn"
+                   href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20saw%20SparkleClean%20Lagos%20and%20want%20something%20similar!"
+                   target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Get Similar
+                </a>
+              </div>
+            </div>
+            <div class="proj-tag">Business Website</div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-info-row">
+              <h3 class="proj-title">SparkleClean Lagos</h3>
+              <span class="proj-year">2024</span>
+            </div>
+            <p class="proj-desc">Service website with online booking and local SEO for a Lagos cleaning brand.</p>
+            <div class="proj-actions">
+              <button class="proj-link open-modal" type="button">View Case Study →</button>
+              <a class="proj-live-link"
+                 href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20want%20a%20similar%20project%20to%20SparkleClean%20Lagos"
+                 target="_blank" rel="noopener noreferrer">Get Similar ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- AccessPro Events -->
+        <article class="project-card reveal delay-2"
+          data-project="accesspro"
+          data-title="AccessPro Events"
+          data-tag="Landing Page"
+          data-desc="A high-converting event registration landing page for an international events company. Built with conversion psychology at its core — urgency elements, social proof, and a frictionless CTA journey that dramatically improved sign-up rates."
+          data-tech="HTML · CSS · JavaScript · Responsive Design · Form Integration"
+          data-result="Conversion rate improved from 3% to 14.2% — a 4.7× improvement."
+          data-year="2024">
+          <div class="proj-img proj-img-3">
+            <div class="proj-mockup">
+              <div class="pmock-bar"><i></i><i></i><i></i></div>
+              <div class="pmock-body">
+                <div class="pmock-lp-hero"></div>
+                <div class="pmock-lp-cta"></div>
+                <div class="pmock-lp-stats"><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="proj-overlay">
+              <div class="proj-overlay-btns">
+                <button class="proj-view-btn open-modal" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Case Study
+                </button>
+                <a class="proj-view-btn proj-live-btn"
+                   href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20saw%20AccessPro%20Events%20and%20want%20something%20similar!"
+                   target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Get Similar
+                </a>
+              </div>
+            </div>
+            <div class="proj-tag">Landing Page</div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-info-row">
+              <h3 class="proj-title">AccessPro Events</h3>
+              <span class="proj-year">2024</span>
+            </div>
+            <p class="proj-desc">Precision-engineered landing page — conversion improved from 3% to 14.2%.</p>
+            <div class="proj-actions">
+              <button class="proj-link open-modal" type="button">View Case Study →</button>
+              <a class="proj-live-link"
+                 href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20want%20a%20similar%20project%20to%20AccessPro%20Events"
+                 target="_blank" rel="noopener noreferrer">Get Similar ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box" id="modalBox">
+      <div class="modal-handle" aria-hidden="true"></div>
+      <button class="modal-close-btn" id="modalClose" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-scroll-area">
+        <div class="modal-proj-img" id="modalImg"></div>
+        <div class="modal-content">
+          <div class="modal-tag-pill" id="modalTag"></div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <div class="modal-section-lbl">Overview</div>
+          <p class="modal-overview" id="modalDesc"></p>
+          <div class="modal-meta-grid">
+            <div class="modal-meta-cell">
+              <div class="modal-meta-lbl">Technologies</div>
+              <div class="modal-meta-val" id="modalTech"></div>
+            </div>
+            <div class="modal-meta-cell">
+              <div class="modal-meta-lbl">Key Result</div>
+              <div class="modal-meta-val modal-result-val" id="modalResult"></div>
+            </div>
+          </div>
+          <div class="modal-cta-row">
+            <a href="#contact" class="btn btn-primary modal-project-cta" id="modalCta">Start a Similar Project</a>
+            <a href="#" class="btn btn-outline modal-whatsapp-cta" id="modalWhatsapp" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════
+       TESTIMONIALS
+  ═══════════════════════ -->
+  <section class="testimonials section section-dark" id="testimonials">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label reveal">Client Words</div>
+        <h2 class="section-title reveal delay-1">What Clients<br /><em>Are Saying</em></h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Wesley delivered beyond what I imagined. Our e-commerce store looks world-class and we saw a massive increase in online orders within the first two months. Absolutely professional."</p>
+          <div class="t-author">
+            <div class="t-avatar">AT</div>
+            <div>
+              <div class="t-name">Amara Tobi</div>
+              <div class="t-role">Founder, LuxeWear NG — Lagos, Nigeria</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal delay-1">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Hiring Wesley was one of the best business decisions I've made. He built our landing page from scratch, and our conversion rate went from 3% to over 14%. The man simply knows what he's doing."</p>
+          <div class="t-author">
+            <div class="t-avatar">JM</div>
+            <div>
+              <div class="t-name">James Mitchell</div>
+              <div class="t-role">CEO, ProScale Solutions — Manchester, UK</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal delay-2">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Fast, reliable, and genuinely talented. Wesley redesigned our outdated site and turned it into something we're proud to show internationally. Communication was seamless across time zones."</p>
+          <div class="t-author">
+            <div class="t-avatar">SC</div>
+            <div>
+              <div class="t-name">Sophie Chen</div>
+              <div class="t-role">Director, AccessPro Events — Toronto, Canada</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner reveal">
+        <div>
+          <h2 class="cta-band-heading">Ready to build something<br /><em>extraordinary?</em></h2>
+          <p class="cta-band-sub">Let's turn your vision into a website that works as hard as you do.</p>
+        </div>
+        <a href="#contact" class="btn btn-primary">
+          Start a Project
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       CONTACT
+  ═══════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <div class="section-label reveal">Get In Touch</div>
+          <h2 class="section-title reveal delay-1">Let's Build Something<br /><em>Remarkable Together</em></h2>
+          <p class="contact-avail reveal delay-2">
+            <span class="avail-dot"></span>
+            Open to worldwide clients.
+          </p>
+          <div class="contact-details reveal delay-3">
+            <a href="/cdn-cgi/l/email-protection#88b9ffedfbe4edf1ece5c8efe5e9e1e4a6ebe7e5" class="contact-item">
+              <div class="ci-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-value"><span class="__cf_email__" data-cfemail="30014755435c5549545d70575d51595c1e535f5d">[email&#160;protected]</span></div>
+              </div>
+            </a>
+            <a href="https://wa.me/2349018214632" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="ci-icon ci-wa">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              </div>
+              <div>
+                <div class="ci-label">WhatsApp</div>
+                <div class="ci-value">+234 901 821 4632</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal delay-2">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" name="name" placeholder="John Doe" required autocomplete="name" />
+                <span class="fline"></span>
+              </div>
+              <div class="form-group">
+                <label for="femail">Email Address</label>
+                <input type="email" id="femail" name="email" placeholder="john@example.com" required autocomplete="email" />
+                <span class="fline"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" name="subject" placeholder="New Website Project" />
+              <span class="fline"></span>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Your Message</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your project, goals, and budget..." required></textarea>
+              <span class="fline"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-label">Send Message</span>
+              <span class="btn-dots" style="display:none"><i></i><i></i><i></i></span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Message sent! I'll respond within 24 hours.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       FOOTER
+  ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Wesley <span>D.M.</span></div>
+          <p class="footer-tag">Web Designer · Frontend Developer · Backend Developer.<br />Lagos, Nigeria × Open to Worldwide Clients.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#home"      class="ft-link">Home</a>
+          <a href="#about"     class="ft-link">About</a>
+          <a href="#services"  class="ft-link">Services</a>
+          <a href="#portfolio" class="ft-link">Portfolio</a>
+          <a href="#contact"   class="ft-link">Contact</a>
+        </nav>
+        <div class="footer-social-wrap">
+          <p class="footer-social-lbl">Connect</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Twitter/X">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Behance">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.714-3.9c-.029-1.24-.769-2.07-1.996-2.07-1.283 0-2.054.822-2.121 2.07h4.117zm-9.543 6.844c-.456.138-.945.204-1.454.204-3.221 0-4.908-1.927-4.908-5.108 0-3.11 1.663-5.27 4.908-5.27.469 0 .945.067 1.374.204V7.5H3.5V5h5.969v2.5H8.054v.048c1.432.473 2.22 1.86 2.22 3.408 0 2.08-1.3 3.888-3.805 4.888z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Wesley D.M. All rights reserved.</p>
+        <p class="footer-made">Designed &amp; Built by <a href="https://wa.me/2349018214632" target="_blank" rel="noopener noreferrer" class="footer-wesley-link">Wesley</a> in Nigeria 🇳🇬</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/2349018214632"
+     target="_blank" rel="noopener noreferrer"
+     class="wa-float" id="waFloat"
+     aria-label="Chat on WhatsApp">
+    <div class="wa-pulse-ring"></div>
+    <div class="wa-btn-inner">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+    <span class="wa-tooltip">Let's Chat</span>
+  </a>
+
+
+  <!-- BACK TO TOP -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

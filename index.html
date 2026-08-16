@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO META ═══ -->
+  <title>Wesley D.M — Full-Stack Developer | Web Apps & Automation | Lagos, Nigeria</title>
+  <meta name="description" content="Wesley D.M builds fast, high-converting websites, web apps and no-code automation workflows (Make.com, Zapier, n8n) for businesses worldwide. Based in Lagos, Nigeria." />
+  <meta name="keywords" content="web designer Nigeria, frontend developer Lagos, backend developer, automation expert, Make.com developer, Zapier expert, n8n workflows, no-code automation Nigeria, workflow automation, hire web developer, portfolio website" />
+  <meta name="author" content="Wesley D.M" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Wesley D.M — Full-Stack Developer | Web Apps & Automation | Lagos, Nigeria" />
+  <meta property="og:description" content="I build fast, modern, high-converting websites, web applications and no-code automation workflows that run your business on autopilot. Let's work together." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">W<span>D</span></div>
+      <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+      <div class="loader-percent" id="loaderPercent">0%</div>
+    </div>
+    <div class="loader-bg-text" aria-hidden="true">LOADING</div>
+  </div>
+
+  <!-- CONTEXT-AWARE RING CURSOR -->
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══════════════════════
+       NAVBAR
+  ═══════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Wesley <span>D.M</span></a>
+
+      <nav class="nav-links" aria-label="Desktop navigation">
+        <a href="#home"       class="nav-link">Home</a>
+        <a href="#about"      class="nav-link">About</a>
+        <a href="#services"   class="nav-link">Services</a>
+        <a href="#portfolio"  class="nav-link">Portfolio</a>
+        <a href="#automation" class="nav-link nav-link-new">Automation</a>
+        <a href="#contact"    class="nav-link nav-cta">Hire Me</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <nav class="nav-overlay" id="navOverlay" aria-label="Mobile navigation">
+    <a href="#home"       class="nav-link">Home</a>
+    <a href="#about"      class="nav-link">About</a>
+    <a href="#services"   class="nav-link">Services</a>
+    <a href="#portfolio"  class="nav-link">Portfolio</a>
+    <a href="#automation" class="nav-link">Automation</a>
+    <a href="#contact"    class="nav-link nav-cta">Hire Me</a>
+  </nav>
+
+  <!-- ═══════════════════════
+       HERO
+  ═══════════════════════ -->
+  <section class="hero" id="home">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="hero-bg-text" aria-hidden="true">BUILD</div>
+
+    <div class="hero-container">
+
+      <div class="hero-badge hero-anim" style="--i:0">
+        <span class="badge-dot"></span>
+        Available for Worldwide Projects
+      </div>
+
+      <h1 class="hero-headline hero-anim" style="--i:1">
+        Full-Stack Developer,<br />
+        <em>specializing in Web Apps &amp; Automation.</em><br />
+        <span class="hl-line">Based in Lagos.</span>
+      </h1>
+
+      <p class="hero-sub hero-anim" style="--i:2">
+        I'm Wesley D.M — I design and build fast, modern, high-converting websites
+        and web applications, and I'm now building automation workflows alongside
+        them, using tools like Make.com to handle repetitive tasks. From Lagos to
+        London, New York to Toronto — your next project starts here.
+      </p>
+
+      <div class="hero-ctas hero-anim" style="--i:3">
+        <a href="#portfolio" class="btn btn-primary">
+          <span>View My Work</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-glass">Start a Project</a>
+      </div>
+
+      <a href="#automation" class="hero-auto-link hero-anim" style="--i:3">
+        <span class="hal-dot"></span>
+        New — see the automation workflows I build
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <div class="hero-stats hero-anim" style="--i:4">
+        <div class="stat">
+          <div class="stat-top"><span class="stat-num" data-count="20">0</span><span class="stat-plus">+</span></div>
+          <span class="stat-label">Projects<br/>Delivered</span>
+        </div>
+        <div class="stat">
+          <div class="stat-top"><span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span></div>
+          <span class="stat-label">Countries<br/>Served</span>
+        </div>
+        <div class="stat">
+          <div class="stat-top"><span class="stat-num" data-count="100">0</span><span class="stat-plus">%</span></div>
+          <span class="stat-label">Client<br/>Satisfaction</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-corner-tag">Lagos, Nigeria × Worldwide</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Web Design</span><span class="msep">✦</span>
+      <span>Frontend Development</span><span class="msep">✦</span>
+      <span>Backend Development</span><span class="msep">✦</span>
+      <span>Automation &amp; Workflows</span><span class="msep">✦</span>
+      <span>Make.com</span><span class="msep">✦</span>
+      <span>Zapier</span><span class="msep">✦</span>
+      <span>n8n</span><span class="msep">✦</span>
+      <span>E-commerce</span><span class="msep">✦</span>
+      <span>Landing Pages</span><span class="msep">✦</span>
+      <span>API &amp; Webhook Integration</span><span class="msep">✦</span>
+      <span>Performance Optimization</span><span class="msep">✦</span>
+      <span>Nigeria &amp; Worldwide</span><span class="msep">✦</span>
+      <span>Web Design</span><span class="msep">✦</span>
+      <span>Frontend Development</span><span class="msep">✦</span>
+      <span>Backend Development</span><span class="msep">✦</span>
+      <span>Automation &amp; Workflows</span><span class="msep">✦</span>
+      <span>Make.com</span><span class="msep">✦</span>
+      <span>Zapier</span><span class="msep">✦</span>
+      <span>n8n</span><span class="msep">✦</span>
+      <span>E-commerce</span><span class="msep">✦</span>
+      <span>Landing Pages</span><span class="msep">✦</span>
+      <span>API &amp; Webhook Integration</span><span class="msep">✦</span>
+      <span>Performance Optimization</span><span class="msep">✦</span>
+      <span>Nigeria &amp; Worldwide</span><span class="msep">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════
+       ABOUT
+  ═══════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual reveal">
+          <div class="about-img-wrap">
+            <div class="about-img-placeholder">
+              <div class="abt-orb abt-orb-1"></div>
+              <div class="abt-orb abt-orb-2"></div>
+              <div class="initials">WD</div>
+            </div>
+            <div class="about-accent-box"></div>
+            <div class="about-float-tag">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Lagos, Nigeria
+            </div>
+          </div>
+          <div class="about-mini-stats">
+            <div class="mini-stat"><span class="ms-val">5.0</span><span class="ms-label">★ Rating</span></div>
+            <div class="mini-stat-sep"></div>
+            <div class="mini-stat"><span class="ms-val">2+</span><span class="ms-label">Years Exp.</span></div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-label reveal">About Wesley D.M</div>
+          <h2 class="section-title reveal delay-1">
+            I Don't Just Build Websites.<br /><em>I Build Growth Engines.</em>
+          </h2>
+          <p class="about-bio reveal delay-2">
+            Growing up in Lagos, I watched countless talented businesses struggle to be taken seriously online — not because their product wasn't good, but because their website didn't reflect their true value. That gap is what drove me into web development, and it's the problem I've dedicated my career to solving.
+          </p>
+          <p class="about-bio reveal delay-2">
+            Today, I'm Wesley D.M — a Full-Stack Developer with a track record of turning weak digital presences into revenue-generating assets. I bring together clean design, solid engineering, and conversion strategy so that your website doesn't just look great — it works hard for your business 24/7.
+          </p>
+          <p class="about-bio reveal delay-2">
+            More recently I've expanded into <strong>AI automation &amp; workflows</strong> — building no-code systems with Make.com, Zapier and n8n that connect the apps a business already runs on. Instead of your team copying data between an inbox, a spreadsheet and a CRM all day, the workflow does it in seconds and routes everything to the right place on its own.
+          </p>
+          <p class="about-bio reveal delay-2">
+            Whether you're a founder in Lagos, a brand scaling in the UK, or a startup in North America — I work with ambitious people who understand that a great website is an investment, not an expense.
+          </p>
+
+          <div class="about-do reveal delay-3">
+            <div class="about-do-lbl">What I Do</div>
+            <div class="about-do-grid">
+              <a href="#services" class="do-item">
+                <span class="do-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span>
+                <span class="do-text"><b>Websites &amp; Web Apps</b>Business sites, landing pages, full-stack builds.</span>
+              </a>
+              <a href="#services" class="do-item">
+                <span class="do-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span>
+                <span class="do-text"><b>E-commerce</b>Online stores with secure, fast checkout.</span>
+              </a>
+              <a href="#automation" class="do-item do-item-new">
+                <span class="do-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5" cy="6" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M7.4 6H16.6M17.7 8.1 13.2 15.9M6.3 8.1l4.5 7.8"/></svg></span>
+                <span class="do-text"><b>AI Automation &amp; Workflows</b>Make.com, Zapier &amp; n8n systems that kill manual work.</span>
+              </a>
+              <a href="#services" class="do-item">
+                <span class="do-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></span>
+                <span class="do-text"><b>Redesign &amp; Optimization</b>Faster load times, better SEO, higher conversion.</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="skills-grid reveal delay-3">
+            <div class="skill-pill">HTML &amp; CSS</div>
+            <div class="skill-pill">JavaScript</div>
+            <div class="skill-pill">Node.js</div>
+            <div class="skill-pill">PHP / MySQL</div>
+            <div class="skill-pill">Responsive Design</div>
+            <div class="skill-pill">SEO Optimization</div>
+            <div class="skill-pill">API Integration</div>
+            <div class="skill-pill">Performance Tuning</div>
+            <div class="skill-pill skill-pill-accent">Make.com</div>
+            <div class="skill-pill skill-pill-accent">Zapier</div>
+            <div class="skill-pill skill-pill-accent">n8n</div>
+            <div class="skill-pill skill-pill-accent">Webhooks</div>
+          </div>
+          <a href="#contact" class="about-cta reveal delay-4">
+            Let's build something great
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       SERVICES
+  ═══════════════════════ -->
+  <section class="services section section-dark" id="services">
+    <div class="svc-bg-dots" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label reveal">What I Do</div>
+        <h2 class="section-title reveal delay-1">End-to-End Web &amp; Automation<br /><em>That Drive Real Results</em></h2>
+        <p class="section-sub reveal delay-2">From a single landing page to a full web application to the automated workflows running quietly behind it — every service is engineered to grow your business and outperform the competition.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="svc-num">01</div>
+          <div class="svc-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="svc-title">Business Websites</h3>
+          <p class="svc-desc">Professional, trust-building websites that position your brand as the obvious choice. Designed to make a powerful first impression and convert visitors into paying clients from day one.</p>
+          <div class="svc-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-1">
+          <div class="svc-num">02</div>
+          <div class="svc-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          </div>
+          <h3 class="svc-title">E-commerce Development</h3>
+          <p class="svc-desc">Full-stack online stores built front-to-back — fast loading, mobile-first, with secure payment integration and a streamlined checkout designed to maximise every sale.</p>
+          <div class="svc-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-2">
+          <div class="svc-num">03</div>
+          <div class="svc-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="svc-title">High-Converting Landing Pages</h3>
+          <p class="svc-desc">Precision-built pages engineered around one goal — turning visitors into leads, subscribers, or customers. Every element is placed with conversion psychology in mind.</p>
+          <div class="svc-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-3">
+          <div class="svc-num">04</div>
+          <div class="svc-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+          </div>
+          <h3 class="svc-title">Website Redesign &amp; Optimization</h3>
+          <p class="svc-desc">Your current site has untapped potential. I rebuild it from the ground up — faster load times, better SEO, improved UX — and transform it into a high-performance asset that actually earns.</p>
+          <div class="svc-arrow">→</div>
+        </div>
+
+        <!-- FEATURED: Automation -->
+        <a href="#automation" class="service-card svc-featured reveal">
+          <div class="svc-feat-main">
+            <div class="svc-feat-top">
+              <div class="svc-num">05</div>
+              <span class="svc-badge">New Service</span>
+            </div>
+            <div class="svc-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5" cy="6" r="2.6"/><circle cx="19" cy="6" r="2.6"/><circle cx="12" cy="18" r="2.6"/><path d="M7.6 6h8.8M17.9 8.3 13.4 15.8M6.1 8.3l4.5 7.5"/></svg>
+            </div>
+            <h3 class="svc-title">AI Automation &amp; Workflows</h3>
+            <p class="svc-desc">I build no-code automation workflows using tools like Make.com, Zapier, and n8n — connecting business apps (Gmail, Google Sheets, webhooks, CRMs) to eliminate repetitive manual tasks and route data based on conditional logic. Your team stops copy-pasting; the system handles it in seconds, 24/7.</p>
+          </div>
+          <div class="svc-feat-side">
+            <div class="svc-tools">
+              <span class="svc-tool">Make.com</span>
+              <span class="svc-tool">Zapier</span>
+              <span class="svc-tool">n8n</span>
+              <span class="svc-tool">Webhooks</span>
+              <span class="svc-tool">Google Sheets</span>
+              <span class="svc-tool">Gmail</span>
+              <span class="svc-tool">CRMs</span>
+            </div>
+            <span class="svc-feat-cta">
+              See 2 live builds
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       PORTFOLIO
+  ═══════════════════════ -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="portfolio-header">
+        <div>
+          <div class="section-label reveal">Case Studies</div>
+          <h2 class="section-title reveal delay-1">Real Projects.<br /><em>Real Results.</em></h2>
+        </div>
+        <p class="portfolio-sub reveal delay-2">These aren't just websites — they're documented business wins with measurable outcomes.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- LuxeWear NG -->
+        <article class="project-card reveal"
+          data-project="luxewear"
+          data-title="LuxeWear NG"
+          data-tag="E-commerce Development"
+          data-desc="PROBLEM: LuxeWear NG was selling premium Nigerian fashion, but their outdated website was losing customers at checkout — poor mobile experience, slow loading, and no trust signals. Potential buyers were leaving before converting. SOLUTION: I rebuilt the platform from scratch with a mobile-first e-commerce architecture, fast-loading product pages, intuitive filtering, secure payment integration, and strategically placed social proof to build buyer confidence. The checkout flow was reduced from 6 steps to 3. RESULT: Online orders increased by 180% within the first 60 days. Mobile conversion rate improved from 1.2% to 4.8%. Page load time dropped from 7.2s to under 2s."
+          data-tech="HTML · CSS · JavaScript · PHP · MySQL · Payment API · Responsive Design"
+          data-result="180% increase in online orders · Mobile conversion rate: 1.2% → 4.8% · Load time: 7.2s → 1.9s"
+          data-year="2024">
+          <div class="proj-img proj-img-1">
+            <div class="proj-mockup">
+              <div class="pmock-bar"><i></i><i></i><i></i></div>
+              <div class="pmock-body">
+                <div class="pmock-hero"></div>
+                <div class="pmock-grid"><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="proj-overlay">
+              <div class="proj-overlay-btns">
+                <button class="proj-view-btn open-modal" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Case Study
+                </button>
+                <a class="proj-view-btn proj-live-btn"
+                   href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20saw%20LuxeWear%20NG%20and%20want%20something%20similar!"
+                   target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Get Similar
+                </a>
+              </div>
+            </div>
+            <div class="proj-tag">E-commerce</div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-info-row">
+              <h3 class="proj-title">LuxeWear NG</h3>
+              <span class="proj-year">2024</span>
+            </div>
+            <p class="proj-desc">E-commerce rebuild that drove 180% more orders and cut load time from 7s to under 2s.</p>
+            <div class="proj-actions">
+              <button class="proj-link open-modal" type="button">Read Case Study →</button>
+              <a class="proj-live-link"
+                 href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20want%20a%20similar%20project%20to%20LuxeWear%20NG"
+                 target="_blank" rel="noopener noreferrer">Get Similar ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SparkleClean Lagos -->
+        <article class="project-card reveal delay-1"
+          data-project="sparkleclean"
+          data-title="SparkleClean Lagos"
+          data-tag="Business Website"
+          data-desc="PROBLEM: SparkleClean had a strong reputation in Lagos but relied entirely on word-of-mouth. They had no digital presence — no way for potential customers to find them on Google, no online booking system, and no way to showcase their work or build trust at scale. SOLUTION: I built a full business website with an integrated online booking flow, clear service pages, customer testimonials, before/after galleries, and a local SEO foundation targeting high-intent Lagos search terms. The backend booking system automatically notified the team via email. RESULT: Organic Google traffic grew from 0 to 1,200+ monthly visitors within 3 months. Booking inquiries tripled within the first 30 days. They now close clients 24/7 — even while they're on a job."
+          data-tech="HTML · CSS · JavaScript · PHP · MySQL · Local SEO · Email Notifications"
+          data-result="3× increase in bookings within 30 days · 1,200+ monthly organic visitors in 90 days · 24/7 automated booking system"
+          data-year="2024">
+          <div class="proj-img proj-img-2">
+            <div class="proj-mockup">
+              <div class="pmock-bar"><i></i><i></i><i></i></div>
+              <div class="pmock-body">
+                <div class="pmock-hero"></div>
+                <div class="pmock-rows"><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="proj-overlay">
+              <div class="proj-overlay-btns">
+                <button class="proj-view-btn open-modal" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Case Study
+                </button>
+                <a class="proj-view-btn proj-live-btn"
+                   href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20saw%20SparkleClean%20Lagos%20and%20want%20something%20similar!"
+                   target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Get Similar
+                </a>
+              </div>
+            </div>
+            <div class="proj-tag">Business Website</div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-info-row">
+              <h3 class="proj-title">SparkleClean Lagos</h3>
+              <span class="proj-year">2024</span>
+            </div>
+            <p class="proj-desc">From zero digital presence to 1,200+ monthly visitors and 3× more bookings in 30 days.</p>
+            <div class="proj-actions">
+              <button class="proj-link open-modal" type="button">Read Case Study →</button>
+              <a class="proj-live-link"
+                 href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20want%20a%20similar%20project%20to%20SparkleClean%20Lagos"
+                 target="_blank" rel="noopener noreferrer">Get Similar ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- AccessPro Events -->
+        <article class="project-card reveal delay-2"
+          data-project="accesspro"
+          data-title="AccessPro Events"
+          data-tag="Landing Page"
+          data-desc="PROBLEM: AccessPro Events was spending heavily on paid ads to drive traffic to their event registration page — but only 3% of visitors were actually signing up. They were paying for clicks that weren't converting, burning budget with no improvement in sight. SOLUTION: I rebuilt the landing page using conversion psychology principles — a compelling above-the-fold hook, countdown urgency timers, speaker social proof, tiered pricing clarity, a frictionless one-step registration form, and mobile-first layout. Every element was A/B tested against a clear hypothesis. RESULT: Conversion rate jumped from 3% to 14.2% — a 373% improvement. Cost per registration dropped by 68%. The client recovered their ad spend within the first 2 weeks post-launch."
+          data-tech="HTML · CSS · JavaScript · A/B Testing · Form API Integration · Analytics"
+          data-result="Conversion rate: 3% → 14.2% (373% improvement) · Cost per lead dropped 68% · ROI recovered in 14 days"
+          data-year="2024">
+          <div class="proj-img proj-img-3">
+            <div class="proj-mockup">
+              <div class="pmock-bar"><i></i><i></i><i></i></div>
+              <div class="pmock-body">
+                <div class="pmock-lp-hero"></div>
+                <div class="pmock-lp-cta"></div>
+                <div class="pmock-lp-stats"><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="proj-overlay">
+              <div class="proj-overlay-btns">
+                <button class="proj-view-btn open-modal" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Case Study
+                </button>
+                <a class="proj-view-btn proj-live-btn"
+                   href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20saw%20AccessPro%20Events%20and%20want%20something%20similar!"
+                   target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Get Similar
+                </a>
+              </div>
+            </div>
+            <div class="proj-tag">Landing Page</div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-info-row">
+              <h3 class="proj-title">AccessPro Events</h3>
+              <span class="proj-year">2024</span>
+            </div>
+            <p class="proj-desc">Landing page rebuild that turned a 3% conversion rate into 14.2% — saving 68% on ad spend.</p>
+            <div class="proj-actions">
+              <button class="proj-link open-modal" type="button">Read Case Study →</button>
+              <a class="proj-live-link"
+                 href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%20want%20a%20similar%20project%20to%20AccessPro%20Events"
+                 target="_blank" rel="noopener noreferrer">Get Similar ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       AUTOMATION & WORKFLOWS
+  ═══════════════════════ -->
+  <section class="automation section section-dark" id="automation">
+    <div class="svc-bg-dots" aria-hidden="true"></div>
+    <div class="container">
+
+      <div class="section-header centered">
+        <div class="section-label reveal">Automation &amp; Workflows</div>
+        <h2 class="section-title reveal delay-1">Stop Paying People To Do<br /><em>What Software Can Do Free.</em></h2>
+        <p class="section-sub auto-lead reveal delay-2">
+          I build no-code automation workflows using tools like Make.com, Zapier, and n8n — connecting business apps (Gmail, Google Sheets, webhooks, CRMs) to eliminate repetitive manual tasks and route data based on conditional logic.
+        </p>
+      </div>
+
+      <div class="auto-tools reveal delay-2" aria-label="Automation tools and apps I connect">
+        <span class="auto-tool">Make.com</span>
+        <span class="auto-tool">Zapier</span>
+        <span class="auto-tool">n8n</span>
+        <span class="auto-tool-sep" aria-hidden="true"></span>
+        <span class="auto-tool">Gmail</span>
+        <span class="auto-tool">Google Sheets</span>
+        <span class="auto-tool">Webhooks</span>
+        <span class="auto-tool">CRMs</span>
+        <span class="auto-tool">REST APIs</span>
+      </div>
+
+      <div class="auto-flow reveal delay-3" aria-label="How an automation works">
+        <div class="af-step"><span class="af-num">01</span><span class="af-lbl">Trigger</span><span class="af-txt">A new email, form entry or webhook fires.</span></div>
+        <div class="af-line" aria-hidden="true"></div>
+        <div class="af-step"><span class="af-num">02</span><span class="af-lbl">Logic</span><span class="af-txt">Filters &amp; routers decide where the data belongs.</span></div>
+        <div class="af-line" aria-hidden="true"></div>
+        <div class="af-step"><span class="af-num">03</span><span class="af-lbl">Action</span><span class="af-txt">It's written, sent or logged — in seconds, no hands.</span></div>
+      </div>
+
+      <div class="auto-sub-header">
+        <div>
+          <div class="section-label reveal">Automation Builds</div>
+          <h3 class="auto-sub-title reveal delay-1">Two Workflows.<br /><em>Built, Tested, Working.</em></h3>
+        </div>
+        <p class="auto-sub-text reveal delay-2">Screenshots taken straight from the builder and the live data they produced — step through each one.</p>
+      </div>
+
+      <div class="auto-builds">
+
+        <!-- BUILD 1 -->
+        <article class="auto-build reveal">
+          <div class="ab-head">
+            <div class="ab-index">Build 01</div>
+            <h4 class="ab-title">Automated Email Logging</h4>
+            <p class="ab-desc">
+              A Make.com scenario that watches an inbox and logs every new email into a spreadsheet automatically — subject, sender and timestamp written the moment it arrives. No one opens Gmail to copy anything across; the record keeps itself.
+            </p>
+            <ul class="ab-points">
+              <li>Gmail trigger polls the inbox every 15 minutes</li>
+              <li>Fields mapped straight into named sheet columns</li>
+              <li>Zero manual data entry, permanent audit trail</li>
+            </ul>
+            <div class="ab-stack">
+              <span class="ab-chip">Make.com</span>
+              <span class="ab-chip">Gmail</span>
+              <span class="ab-chip">Google Sheets</span>
+            </div>
+          </div>
+
+          <div class="ab-gallery" data-gallery>
+            <div class="ab-stage">
+              <div class="ab-frame">
+                <img class="ab-shot is-active" src="automation-images/build1-mapping-empty.png" loading="lazy" decoding="async"
+                     alt="Make.com scenario with a Gmail Watch Emails module connected to a Google Sheets Add a Row module, column fields still empty"
+                     data-caption="The scenario wired up in Make.com — a Gmail <b>Watch emails</b> trigger feeding a Google Sheets <b>Add a Row</b> action. The Subject, Sender and Date columns are still empty here." />
+                <img class="ab-shot" src="automation-images/build1-mapping-filled.png" loading="lazy" decoding="async"
+                     alt="The same Google Sheets module with Subject, Sender and Date columns mapped to Gmail fields"
+                     data-caption="Each column mapped to live Gmail data — <b>Subject</b>, <b>From (email)</b> and <b>Date</b> pulled directly off the trigger, so every row fills itself." />
+                <img class="ab-shot" src="automation-images/build1-result.png" loading="lazy" decoding="async"
+                     alt="Google Sheet named Email Log with a row containing an email subject, sender address and timestamp"
+                     data-caption="The result — an email lands and the row writes itself into the <b>Email Log</b> sheet: subject, sender address and timestamp, untouched by human hands." />
+              </div>
+              <button class="ab-nav ab-prev" type="button" aria-label="Previous step">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="ab-nav ab-next" type="button" aria-label="Next step">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <button class="ab-zoom" type="button" aria-label="View full size">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+              <div class="ab-counter"><span class="ab-cur">1</span> / <span class="ab-total">3</span></div>
+            </div>
+
+            <p class="ab-caption" aria-live="polite"></p>
+
+            <div class="ab-thumbs" role="tablist" aria-label="Build steps">
+              <button class="ab-thumb is-active" type="button" role="tab" aria-selected="true"><img src="automation-images/build1-mapping-empty.png" alt="" loading="lazy" /><span>01</span></button>
+              <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build1-mapping-filled.png" alt="" loading="lazy" /><span>02</span></button>
+              <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build1-result.png" alt="" loading="lazy" /><span>03</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- BUILD 2 -->
+        <article class="auto-build auto-build-alt reveal">
+          <div class="ab-head">
+            <div class="ab-index">Build 02</div>
+            <h4 class="ab-title">Conditional Order Routing</h4>
+            <p class="ab-desc">
+              A webhook-driven scenario that receives incoming order data and routes it to different destinations based on a value threshold — high-value orders go one way for priority handling, standard orders go another. The decision happens in milliseconds, every time.
+            </p>
+            <ul class="ab-points">
+              <li>Custom webhook fires the instant data arrives</li>
+              <li>Router + filters split high-value from standard orders</li>
+              <li>Each path writes to its own destination sheet</li>
+            </ul>
+            <div class="ab-stack">
+              <span class="ab-chip">Make.com</span>
+              <span class="ab-chip">Webhooks</span>
+              <span class="ab-chip">Router Logic</span>
+              <span class="ab-chip">Google Sheets</span>
+            </div>
+          </div>
+
+          <div class="ab-gallery" data-gallery>
+            <div class="ab-stage">
+              <div class="ab-frame">
+                <img class="ab-shot is-active" src="automation-images/build2-router-overview.png" loading="lazy" decoding="async"
+                     alt="Make.com scenario showing a webhook feeding a router that splits into a High Value path and a Standard Value path, each ending in Google Sheets"
+                     data-caption="The build — a custom webhook feeds a <b>Router</b> with two filtered paths, <b>High Value</b> and <b>Standard Value</b>, each ending in its own Google Sheets destination." />
+                <img class="ab-shot" src="automation-images/build2-test-highvalue.png" loading="lazy" decoding="async"
+                     alt="Test run where the High Value route processed one operation and the Standard Value route processed zero"
+                     data-caption="Test run with a <b>high-value order</b>: the router sends the bundle down the High Value route — 1 operation there, 0 on the standard route." />
+                <img class="ab-shot" src="automation-images/build2-test-standard.png" loading="lazy" decoding="async"
+                     alt="Test run where the Standard Value route processed one operation and the High Value route processed zero"
+                     data-caption="Same webhook, a <b>standard order</b>: the logic flips — High Value 0, Standard Value 1 — and it's written to the other sheet instead." />
+                <img class="ab-shot" src="automation-images/build2-result.png" loading="lazy" decoding="async"
+                     alt="Google Sheet named Orders listing Big Client at value 500 and Small Client at value 50, both marked new"
+                     data-caption="Both test orders logged correctly in the <b>Orders</b> sheet — <b>Big Client</b> at 500 and <b>Small Client</b> at 50, each captured with its status." />
+              </div>
+              <button class="ab-nav ab-prev" type="button" aria-label="Previous step">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="ab-nav ab-next" type="button" aria-label="Next step">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <button class="ab-zoom" type="button" aria-label="View full size">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+              <div class="ab-counter"><span class="ab-cur">1</span> / <span class="ab-total">4</span></div>
+            </div>
+
+            <p class="ab-caption" aria-live="polite"></p>
+
+            <div class="ab-thumbs" role="tablist" aria-label="Build steps">
+              <button class="ab-thumb is-active" type="button" role="tab" aria-selected="true"><img src="automation-images/build2-router-overview.png" alt="" loading="lazy" /><span>01</span></button>
+              <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build2-test-highvalue.png" alt="" loading="lazy" /><span>02</span></button>
+              <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build2-test-standard.png" alt="" loading="lazy" /><span>03</span></button>
+              <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build2-result.png" alt="" loading="lazy" /><span>04</span></button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="auto-cta reveal">
+        <p class="auto-cta-text">Got a task your team repeats every single day? That's an automation waiting to happen.</p>
+        <a href="https://wa.me/2349018214632?text=Hi%20Wesley%2C%20I%27d%20like%20an%20automation%20workflow%20built%20for%20my%20business."
+           target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+          Automate My Workflow
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Automation screenshot viewer">
+    <button class="lb-close" id="lbClose" type="button" aria-label="Close viewer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous image">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next image">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box" id="modalBox">
+      <div class="modal-handle" aria-hidden="true"></div>
+      <button class="modal-close-btn" id="modalClose" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-scroll-area">
+        <div class="modal-proj-img" id="modalImg"></div>
+        <div class="modal-content">
+          <div class="modal-tag-pill" id="modalTag"></div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <div class="modal-section-lbl">Case Study</div>
+          <p class="modal-overview" id="modalDesc"></p>
+          <div class="modal-meta-grid">
+            <div class="modal-meta-cell">
+              <div class="modal-meta-lbl">Technologies Used</div>
+              <div class="modal-meta-val" id="modalTech"></div>
+            </div>
+            <div class="modal-meta-cell">
+              <div class="modal-meta-lbl">Measurable Results</div>
+              <div class="modal-meta-val modal-result-val" id="modalResult"></div>
+            </div>
+          </div>
+          <div class="modal-cta-row">
+            <a href="#contact" class="btn btn-primary modal-project-cta" id="modalCta">Start a Similar Project</a>
+            <a href="#" class="btn btn-outline modal-whatsapp-cta" id="modalWhatsapp" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════
+       TESTIMONIALS
+  ═══════════════════════ -->
+  <section class="testimonials section section-dark" id="testimonials">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label reveal">Client Results</div>
+        <h2 class="section-title reveal delay-1">Don't Take My Word<br /><em>For It</em></h2>
+        <p class="section-sub reveal delay-2">Here's what clients say after working with Wesley D.M</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Working with Wesley D.M was one of the best decisions I made for my business. Within 60 days of launching our new store, online orders had increased by 180%. He didn't just build a website — he built a sales machine."</p>
+          <div class="t-author">
+            <div class="t-avatar">AT</div>
+            <div>
+              <div class="t-name">Amara Tobi</div>
+              <div class="t-role">Founder, LuxeWear NG — Lagos, Nigeria</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal delay-1">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Wesley D.M took our landing page from a 3% conversion rate to over 14%. We cut our cost per lead by 68% and recovered our entire ad budget within two weeks. If you need results, he's the person to call."</p>
+          <div class="t-author">
+            <div class="t-avatar">JM</div>
+            <div>
+              <div class="t-name">James Mitchell</div>
+              <div class="t-role">CEO, ProScale Solutions — Manchester, UK</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal delay-2">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Exceptional talent, zero ego, and completely reliable across time zones. Wesley D.M rebuilt our platform faster than we expected, and the results showed immediately — better engagement, faster load times, and a dramatic improvement in how clients perceive us internationally."</p>
+          <div class="t-author">
+            <div class="t-avatar">SC</div>
+            <div>
+              <div class="t-name">Sophie Chen</div>
+              <div class="t-role">Director, AccessPro Events — Toronto, Canada</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner reveal">
+        <div>
+          <h2 class="cta-band-heading">Your competitors have<br /><em>better websites. Fix that.</em></h2>
+          <p class="cta-band-sub">Most businesses lose customers every day to a website that doesn't convert. Let's change that — starting today.</p>
+        </div>
+        <a href="#contact" class="btn btn-primary">
+          Get a Free Consultation
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       CONTACT
+  ═══════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <div class="section-label reveal">Work With Me</div>
+          <h2 class="section-title reveal delay-1">Ready to Invest in a<br /><em>Website That Actually Works?</em></h2>
+          <p class="section-sub reveal delay-1" style="margin-bottom:1.5rem;">Most websites are just digital brochures. I build websites that generate leads, close sales, and grow businesses — plus the automation workflows that handle the busywork behind them. 24 hours a day, 7 days a week. If that's what you want, let's talk.</p>
+          <p class="contact-avail reveal delay-2">
+            <span class="avail-dot"></span>
+            Currently accepting new clients worldwide.
+          </p>
+          <div class="contact-details reveal delay-3">
+            <a href="#" id="emailLink" class="contact-item">
+              <div class="ci-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="ci-label">Send an Email</div>
+                <div class="ci-value" id="emailDisplay">1wesleydm&#64;gmail.com</div>
+              </div>
+            </a>
+            <a href="https://wa.me/2349018214632?text=Hi%20Wesley%20D.M%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="ci-icon ci-wa">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              </div>
+              <div>
+                <div class="ci-label">WhatsApp — Fastest Response</div>
+                <div class="ci-value">+234 901 821 4632</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal delay-2">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjgeznpg" method="POST">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" name="name" placeholder="John Doe" required autocomplete="name" />
+                <span class="fline"></span>
+              </div>
+              <div class="form-group">
+                <label for="femail">Email Address</label>
+                <input type="email" id="femail" name="email" placeholder="john@example.com" required autocomplete="email" />
+                <span class="fline"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">What do you need?</label>
+              <input type="text" id="fsubject" name="subject" placeholder="e.g. E-commerce store, landing page, automation workflow..." />
+              <span class="fline"></span>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Tell Me About Your Project</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Describe your business, your goals, your timeline, and your budget. The more detail you share, the better I can help." required></textarea>
+              <span class="fline"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-label">Send Message — Let's Talk</span>
+              <span class="btn-dots" style="display:none"><i></i><i></i><i></i></span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Message received! I'll respond within 24 hours.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════
+       FOOTER
+  ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Wesley <span>D.M</span></div>
+          <p class="footer-tag">Full-Stack Developer — Web Apps &amp; Automation<br />Make.com · Zapier · n8n<br />Lagos, Nigeria × Open to Worldwide Clients</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#home"       class="ft-link">Home</a>
+          <a href="#about"      class="ft-link">About</a>
+          <a href="#services"   class="ft-link">Services</a>
+          <a href="#portfolio"  class="ft-link">Portfolio</a>
+          <a href="#automation" class="ft-link">Automation</a>
+          <a href="#contact"    class="ft-link">Contact</a>
+        </nav>
+        <div class="footer-social-wrap">
+          <p class="footer-social-lbl">Connect</p>
+          <div class="footer-socials">
+            <a href="https://x.com/wesleydm69" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter/X">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/wesley-onuorah-264884316" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Behance">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.714-3.9c-.029-1.24-.769-2.07-1.996-2.07-1.283 0-2.054.822-2.121 2.07h4.117zm-9.543 6.844c-.456.138-.945.204-1.454.204-3.221 0-4.908-1.927-4.908-5.108 0-3.11 1.663-5.27 4.908-5.27.469 0 .945.067 1.374.204V7.5H3.5V5h5.969v2.5H8.054v.048c1.432.473 2.22 1.86 2.22 3.408 0 2.08-1.3 3.888-3.805 4.888z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Wesley D.M — All rights reserved.</p>
+        <p class="footer-made">Designed &amp; Built by <a href="https://wa.me/2349018214632" target="_blank" rel="noopener noreferrer" class="footer-wesley-link">Wesley D.M</a> in Nigeria 🇳🇬</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/2349018214632?text=Hi%20Wesley%20D.M%2C%20I%27d%20like%20to%20discuss%20a%20project."
+     target="_blank" rel="noopener noreferrer"
+     class="wa-float" id="waFloat"
+     aria-label="Chat on WhatsApp">
+    <div class="wa-pulse-ring"></div>
+    <div class="wa-btn-inner">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+    <span class="wa-tooltip">Let's Talk</span>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

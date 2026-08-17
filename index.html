@@ -332,10 +332,12 @@
               <span class="svc-tool">Webhooks</span>
               <span class="svc-tool">Google Sheets</span>
               <span class="svc-tool">Gmail</span>
+              <span class="svc-tool">Slack</span>
+              <span class="svc-tool">Google Gemini</span>
               <span class="svc-tool">CRMs</span>
             </div>
             <span class="svc-feat-cta">
-              See 2 live builds
+              See 4 live builds
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
@@ -531,6 +533,8 @@
         <span class="auto-tool-sep" aria-hidden="true"></span>
         <span class="auto-tool">Gmail</span>
         <span class="auto-tool">Google Sheets</span>
+        <span class="auto-tool">Slack</span>
+        <span class="auto-tool">Google Gemini</span>
         <span class="auto-tool">Webhooks</span>
         <span class="auto-tool">CRMs</span>
         <span class="auto-tool">REST APIs</span>
@@ -547,9 +551,9 @@
       <div class="auto-sub-header">
         <div>
           <div class="section-label reveal">Automation Builds</div>
-          <h3 class="auto-sub-title reveal delay-1">Two Workflows.<br /><em>Built, Tested, Working.</em></h3>
+          <h3 class="auto-sub-title reveal delay-1">Four Workflows.<br /><em>Built, Tested, Working.</em></h3>
         </div>
-        <p class="auto-sub-text reveal delay-2">Screenshots taken straight from the builder and the live data they produced — step through each one.</p>
+        <p class="auto-sub-text reveal delay-2">Screenshots taken straight from the builder and the live results they produced — step through each one.</p>
       </div>
 
       <div class="auto-builds">
@@ -665,6 +669,110 @@
               <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build2-test-highvalue.png" alt="" loading="lazy" /><span>02</span></button>
               <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build2-test-standard.png" alt="" loading="lazy" /><span>03</span></button>
               <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build2-result.png" alt="" loading="lazy" /><span>04</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- BUILD 3 -->
+        <article class="auto-build reveal">
+          <div class="ab-head">
+            <div class="ab-index">Build 03</div>
+            <h4 class="ab-title">Slack Notification Automation</h4>
+            <p class="ab-desc">
+              A webhook-driven scenario that takes incoming form submissions, passes them through a Router, and posts a formatted notification straight into a Slack channel. The routing rules decide which submissions go where, so the right channel hears about the right thing without anyone forwarding an email.
+            </p>
+            <ul class="ab-points">
+              <li>Custom webhook receives the submission the moment it's sent</li>
+              <li>Router applies the rules that decide each destination</li>
+              <li>Formatted message lands in Slack, not somebody's inbox</li>
+            </ul>
+            <div class="ab-stack">
+              <span class="ab-chip">Make.com</span>
+              <span class="ab-chip">Webhooks</span>
+              <span class="ab-chip">Router Logic</span>
+              <span class="ab-chip">Slack</span>
+            </div>
+          </div>
+
+          <div class="ab-gallery" data-gallery>
+            <div class="ab-stage">
+              <div class="ab-frame">
+                <img class="ab-shot is-active" src="automation-images/build3-scenario-overview.png" loading="lazy" decoding="async"
+                     alt="Make.com scenario showing a custom webhook feeding a router, whose first route connects to a Slack Send a Message module"
+                     data-caption="The scenario in Make.com — a custom <b>webhook</b> feeds a <b>Router</b>, whose first route posts into Slack. The webhook and Slack modules both show a completed run." />
+                <img class="ab-shot" src="automation-images/build3-slack-result.png" loading="lazy" decoding="async"
+                     alt="Slack channel named social showing a message from the Make app reading New submission received"
+                     data-caption="The output in the <b>#social</b> channel — the Make app posts <b>&ldquo;New submission received&rdquo;</b> the moment the webhook fires, with nobody forwarding anything by hand." />
+              </div>
+              <button class="ab-nav ab-prev" type="button" aria-label="Previous step">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="ab-nav ab-next" type="button" aria-label="Next step">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <button class="ab-zoom" type="button" aria-label="View full size">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+              <div class="ab-counter"><span class="ab-cur">1</span> / <span class="ab-total">2</span></div>
+            </div>
+
+            <p class="ab-caption" aria-live="polite"></p>
+
+            <div class="ab-thumbs" role="tablist" aria-label="Build steps">
+              <button class="ab-thumb is-active" type="button" role="tab" aria-selected="true"><img src="automation-images/build3-scenario-overview.png" alt="" loading="lazy" /><span>01</span></button>
+              <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build3-slack-result.png" alt="" loading="lazy" /><span>02</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- BUILD 4 -->
+        <article class="auto-build auto-build-alt reveal">
+          <div class="ab-head">
+            <div class="ab-index">Build 04</div>
+            <h4 class="ab-title">AI Lead Qualifier</h4>
+            <p class="ab-desc">
+              Incoming lead data — name, email and message — is sent to Google Gemini, which scores the lead's quality, summarises what the person actually wants, and drafts a suggested reply. The result posts to Slack, so the first thing the team sees about a new lead is how good it is and what to say back.
+            </p>
+            <ul class="ab-points">
+              <li>Webhook captures the lead the moment the form is submitted</li>
+              <li>Gemini returns a score, a summary and a suggested reply</li>
+              <li>Scored 9 for a real buyer and 1 for a browser — same workflow</li>
+            </ul>
+            <div class="ab-stack">
+              <span class="ab-chip">Make.com</span>
+              <span class="ab-chip">Webhooks</span>
+              <span class="ab-chip">Google Gemini</span>
+              <span class="ab-chip">Slack</span>
+            </div>
+          </div>
+
+          <div class="ab-gallery" data-gallery>
+            <div class="ab-stage">
+              <div class="ab-frame">
+                <img class="ab-shot is-active" src="automation-images/build4-ai-overview.png" loading="lazy" decoding="async"
+                     alt="Make.com scenario with three modules — a custom webhook, Google Gemini AI generating a response, and Slack sending a message — all showing successful runs"
+                     data-caption="Three modules, all green after a successful run — a custom <b>webhook</b> takes the lead in, <b>Google Gemini</b> generates the assessment, and <b>Slack</b> delivers it." />
+                <img class="ab-shot" src="automation-images/build4-ai-slack-results.png" loading="lazy" decoding="async"
+                     alt="Slack channel showing two qualified lead messages, one scored 9 with a summary and suggested reply, another scored 1 for a visitor who is just browsing"
+                     data-caption="Proof that it discriminates. Same workflow, two leads: <b>Score 9</b> for Sarah, who needs Shopify order logging — with a summary and a drafted reply ready to send — and <b>Score 1</b> for a visitor just browsing, handled with a courteous low-priority response." />
+              </div>
+              <button class="ab-nav ab-prev" type="button" aria-label="Previous step">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="ab-nav ab-next" type="button" aria-label="Next step">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <button class="ab-zoom" type="button" aria-label="View full size">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+              <div class="ab-counter"><span class="ab-cur">1</span> / <span class="ab-total">2</span></div>
+            </div>
+
+            <p class="ab-caption" aria-live="polite"></p>
+
+            <div class="ab-thumbs" role="tablist" aria-label="Build steps">
+              <button class="ab-thumb is-active" type="button" role="tab" aria-selected="true"><img src="automation-images/build4-ai-overview.png" alt="" loading="lazy" /><span>01</span></button>
+              <button class="ab-thumb" type="button" role="tab" aria-selected="false"><img src="automation-images/build4-ai-slack-results.png" alt="" loading="lazy" /><span>02</span></button>
             </div>
           </div>
         </article>
@@ -889,17 +997,23 @@
         <div class="footer-brand">
           <div class="footer-logo">Wesley <span>D.M</span></div>
           <p class="footer-tag">Full-Stack Developer — Web Apps &amp; Automation<br />Make.com · Zapier · n8n<br />Lagos, Nigeria × Open to Worldwide Clients</p>
+          <p class="footer-avail"><span class="avail-dot"></span>Available for new projects</p>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#home"       class="ft-link">Home</a>
-          <a href="#about"      class="ft-link">About</a>
-          <a href="#services"   class="ft-link">Services</a>
-          <a href="#portfolio"  class="ft-link">Portfolio</a>
-          <a href="#automation" class="ft-link">Automation</a>
-          <a href="#contact"    class="ft-link">Contact</a>
-        </nav>
+
+        <div class="footer-col">
+          <p class="footer-col-lbl">Navigate</p>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#home"       class="ft-link">Home</a>
+            <a href="#about"      class="ft-link">About</a>
+            <a href="#services"   class="ft-link">Services</a>
+            <a href="#portfolio"  class="ft-link">Portfolio</a>
+            <a href="#automation" class="ft-link">Automation</a>
+            <a href="#contact"    class="ft-link">Contact</a>
+          </nav>
+        </div>
+
         <div class="footer-social-wrap">
-          <p class="footer-social-lbl">Connect</p>
+          <p class="footer-col-lbl">Connect</p>
           <div class="footer-socials">
             <a href="https://x.com/wesleydm69" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter/X">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>

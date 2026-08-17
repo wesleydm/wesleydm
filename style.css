@@ -308,7 +308,7 @@ em { font-family: var(--font-disp); font-style: italic; font-weight: 300; text-d
 .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: bdot 2s ease-in-out infinite; flex-shrink: 0; }
 @keyframes bdot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.6)} }
 
-.hero-headline { font-size: clamp(2.1rem,7.2vw,4.3rem); color: var(--white); font-weight: 400; line-height: 1.04; margin-bottom: 1.5rem; }
+.hero-headline { font-size: clamp(2.4rem,9vw,5.5rem); color: var(--white); font-weight: 400; line-height: 1.04; margin-bottom: 1.5rem; }
 .hero-headline em { text-decoration: none; font-style: italic; font-weight: 300; color: rgba(255,255,255,.5); }
 .hl-line { position: relative; display: inline-block; }
 .hl-line::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 1px; background: rgba(255,255,255,.2); }
@@ -650,10 +650,16 @@ em { font-family: var(--font-disp); font-style: italic; font-weight: 300; text-d
 .footer-logo { font-family: var(--font-disp); font-size: 1.4rem; font-weight: 600; color: var(--white); letter-spacing: -.01em; margin-bottom: .6rem; }
 .footer-logo span { color: rgba(255,255,255,.3); font-weight: 300; }
 .footer-tag { font-size: .78rem; color: rgba(255,255,255,.22); line-height: 1.75; }
-.footer-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.footer-avail {
+  display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem;
+  font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(255,255,255,.42);
+}
+.footer-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
 .ft-link { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.35); transition: color .3s; min-height: 44px; display: flex; align-items: center; }
 .ft-link:hover { color: var(--white); }
-.footer-social-lbl { font-size: .6rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.2); margin-bottom: .75rem; }
+.footer-social-lbl,
+.footer-col-lbl { font-size: .6rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.2); margin-bottom: .75rem; }
 .footer-socials { display: flex; gap: .5rem; flex-wrap: wrap; }
 .social-link { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.3); transition: all .3s var(--ease); }
 .social-link:hover { background: var(--white); border-color: var(--white); color: var(--ink); transform: translateY(-3px); }
@@ -1012,7 +1018,6 @@ em { font-family: var(--font-disp); font-style: italic; font-weight: 300; text-d
   .modal-cta-row { flex-direction: row; }
   .modal-project-cta, .modal-whatsapp-cta { width: auto; flex: 1; }
   .cta-band .btn-primary { width: auto; }
-  .footer-nav { flex-direction: column; gap: .6rem; }
 
   /* Automation */
   .about-do-grid { grid-template-columns: repeat(2,1fr); }
@@ -1052,8 +1057,13 @@ em { font-family: var(--font-disp); font-style: italic; font-weight: 300; text-d
   .modal-handle { display: none; }
   .modal-content { padding: 2rem 2.25rem 2.5rem; }
 
-  /* Footer grid */
-  .footer-top { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 3rem; align-items: start; }
+  /* Footer — 2×2 on tablet, nav in two columns */
+  .footer-top { display: grid; grid-template-columns: repeat(2,1fr); gap: 2.75rem 2.5rem; align-items: start; }
+  .footer-nav {
+    display: grid; grid-auto-flow: column;
+    grid-template-columns: repeat(2,1fr); grid-template-rows: repeat(3,auto);
+    gap: .4rem 1.5rem;
+  }
   .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
 
   /* CTA band row */
@@ -1126,11 +1136,21 @@ em { font-family: var(--font-disp); font-style: italic; font-weight: 300; text-d
   .project-card:hover .proj-overlay-btns { transform: none; opacity: 1; }
   .service-card { cursor: none; }
 
-  /* About grid wider gap */
-  .about-grid { gap: 6.5rem; }
+  /* About — top-align so the portrait anchors to the heading, not mid-air.
+     (The bio column got much taller when the automation copy was added.) */
+  .about-grid { gap: 6.5rem; align-items: start; }
+  .about-visual { padding-top: .5rem; }
 
   /* Hero container padding */
   .hero-container { padding: calc(var(--nav-h) + 4rem) 2rem 5rem; }
+
+  /* ── Footer — single compact row ── */
+  .footer { padding: 4.5rem 0 2rem; }
+  .footer-top { grid-template-columns: 1.6fr 1.1fr auto; gap: 4rem; margin-bottom: 3.5rem; }
+  .footer-nav { gap: .75rem 2.5rem; }
+  .ft-link { min-height: 0; padding: .12rem 0; transition: color .3s, transform .3s var(--ease); }
+  .ft-link:hover { transform: translateX(3px); }
+  .footer-socials { flex-wrap: nowrap; }
 
   /* ── Automation — split layout ── */
   .auto-builds { gap: 5.5rem; }
